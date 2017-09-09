@@ -46,7 +46,6 @@ public class Index extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Index.this,Register.class);
                 startActivity(intent);
-                finish();
             }
         });
 

@@ -30,6 +30,7 @@ public class Register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();   //去掉标题栏
         setContentView(R.layout.activity_register);
         initViews();
 

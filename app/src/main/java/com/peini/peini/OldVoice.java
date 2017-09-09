@@ -51,7 +51,6 @@ public class OldVoice extends AppCompatActivity {
                     }
 
                     recordState = true;
-                    oldRecordButton.setText("停止录音");
                     mRecorder = new MediaRecorder();
                     mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
                     mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
@@ -68,11 +67,9 @@ public class OldVoice extends AppCompatActivity {
                     mRecorder.stop();
                     mRecorder.release();
                     mRecorder = null;
-                    oldRecordButton.setText("开始录音");
 
                     if(!playState){
                         playState = true;
-                        oldRecordButton.setText("停止播放");
                         mPlayer = new MediaPlayer();
                         try{
                             mPlayer.setDataSource(fileName);
@@ -85,7 +82,6 @@ public class OldVoice extends AppCompatActivity {
                         playState = false;
                         mPlayer.release();
                         mPlayer = null;
-                        oldRecordButton.setText("开始播放");
                     }
                 }
             }
